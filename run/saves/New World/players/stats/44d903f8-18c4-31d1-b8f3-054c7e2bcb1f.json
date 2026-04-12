@@ -1,0 +1,17 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "minecraft:spruce_leaves": 7,
+      "minecraft:string": 1,
+      "minecraft:stripped_jungle_wood": 1
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 6330,
+      "minecraft:total_world_time": 10397,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 6330,
+      "minecraft:time_since_death": 6330
+    }
+  },
+  "DataVersion": 4786
+}

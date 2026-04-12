@@ -1,0 +1,20 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "minecraft:golden_apple": 1,
+      "minecraft:spruce_leaves": 1,
+      "minecraft:stripped_jungle_wood": 2
+    },
+    "minecraft:custom": {
+      "minecraft:sprint_one_cm": 338,
+      "minecraft:time_since_rest": 1206,
+      "minecraft:walk_one_cm": 715,
+      "minecraft:total_world_time": 1233,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 1206,
+      "minecraft:jump": 1,
+      "minecraft:time_since_death": 1206
+    }
+  },
+  "DataVersion": 4786
+}

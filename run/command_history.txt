@@ -1,0 +1,2 @@
+/effect give @s minecraft:hunger 15 100
+/effect clear

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "eateverything",
+  "version": "${version}",
+  "name": "eateverything",
+  "description": "eat EVERYTHING",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/eateverything/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "net.creeperdev.eateverything.client.EateverythingDataGenerator"
+    ],
+    "client": [
+      "net.creeperdev.eateverything.client.EateverythingClient"
+    ],
+    "main": [
+      "net.creeperdev.eateverything.Eateverything"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

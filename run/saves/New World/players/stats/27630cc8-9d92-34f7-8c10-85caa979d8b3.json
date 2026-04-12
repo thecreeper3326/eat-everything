@@ -1,0 +1,29 @@
+{
+  "stats": {
+    "minecraft:picked_up": {
+      "minecraft:stripped_jungle_wood": 1
+    },
+    "minecraft:custom": {
+      "minecraft:sprint_one_cm": 795,
+      "minecraft:time_since_rest": 1179,
+      "minecraft:fall_one_cm": 225,
+      "minecraft:walk_one_cm": 1973,
+      "minecraft:total_world_time": 1307,
+      "minecraft:leave_game": 2,
+      "minecraft:fly_one_cm": 1816,
+      "minecraft:play_time": 1179,
+      "minecraft:jump": 7,
+      "minecraft:time_since_death": 1179
+    },
+    "minecraft:mined": {
+      "minecraft:stripped_jungle_wood": 1
+    },
+    "minecraft:crafted": {
+      "minecraft:jungle_planks": 4
+    },
+    "minecraft:used": {
+      "minecraft:stripped_jungle_wood": 3
+    }
+  },
+  "DataVersion": 4786
+}

@@ -1,0 +1,33 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "minecraft:grass_block": 6,
+      "minecraft:golden_apple": 1,
+      "minecraft:jungle_planks": 4,
+      "minecraft:redstone": 4,
+      "minecraft:dirt": 1,
+      "minecraft:compass": 1
+    },
+    "minecraft:custom": {
+      "minecraft:sprint_one_cm": 3506,
+      "minecraft:time_since_rest": 1814,
+      "minecraft:fall_one_cm": 2525,
+      "minecraft:walk_one_cm": 2742,
+      "minecraft:total_world_time": 1985,
+      "minecraft:leave_game": 1,
+      "minecraft:fly_one_cm": 5877,
+      "minecraft:damage_taken": 100,
+      "minecraft:sneak_time": 19,
+      "minecraft:play_time": 1814,
+      "minecraft:jump": 41,
+      "minecraft:time_since_death": 1814
+    },
+    "minecraft:picked_up": {
+      "minecraft:dirt": 1
+    },
+    "minecraft:mined": {
+      "minecraft:grass_block": 1
+    }
+  },
+  "DataVersion": 4786
+}
