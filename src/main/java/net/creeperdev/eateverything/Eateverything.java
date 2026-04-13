@@ -32,13 +32,14 @@ public class Eateverything implements ModInitializer {
         ServerTickEvents.END_SERVER_TICK.register(server -> {
             counter++;
             if (counter % 2 == 0) {
-                e = new Consumable(FigManager.FIGS.consumeSeconds, ItemUseAnimation.EAT, SoundEvents.GENERIC_EAT, true, List.of());
+
                 food = new FoodProperties(FigManager.FIGS.nutrition,FigManager.FIGS.saturation, FigManager.FIGS.alwaysEat);
                 for (ServerPlayer player : server.getPlayerList().getPlayers()) {
                     Inventory inventory = player.getInventory();
                     boolean change = false;
                     for (int i = 0; i < inventory.getContainerSize(); i++) {
                         ItemStack stack = inventory.getItem(i);
+                        e = new Consumable(FigManager.FIGS.consumeSeconds, ItemUseAnimation.EAT, SoundEvents.GENERIC_EAT, true, List.of());
                         if (!stack.isEmpty()) {
                             stack.set(DataComponents.CONSUMABLE, e);
                             stack.set(DataComponents.FOOD, food);
