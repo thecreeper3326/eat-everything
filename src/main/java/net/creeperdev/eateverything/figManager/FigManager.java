@@ -18,8 +18,8 @@ import java.io.FileWriter;
 
 public class FigManager {
 
-    public static final String projectName = "test";
-    public static final String projectVersion = "1.0";
+    public static final String projectName = "eat_everything";
+    public static final String projectVersion = "1.1";
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     private static final File FILE = new File("config/"+projectName+"/config.json");
     public static Figs FIGS = new Figs();
