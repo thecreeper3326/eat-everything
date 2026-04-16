@@ -24,29 +24,36 @@ public class Eateverything implements ModInitializer {
     public static FoodProperties food = new FoodProperties(1,1,true);
     public static Logger LOGGER = LoggerFactory.getLogger("EatEverything");
     public static int counter = 0;
+    public static String figManagerName = "eat_everything";
     @Override
     public void onInitialize()  {
         LOGGER.info("Initializing...");
-        FigManager.init();
+        FigManager.init(figManagerName);
 
         ServerTickEvents.END_SERVER_TICK.register(server -> {
             counter++;
             if (counter % 2 == 0) {
+                Figs f = FigManager.FIGS;
 
-                food = new FoodProperties(FigManager.FIGS.nutrition,FigManager.FIGS.saturation, FigManager.FIGS.alwaysEat);
+                food = new FoodProperties(f.nutrition.value,f.saturation.value, f.alwaysEat.value);
                 for (ServerPlayer player : server.getPlayerList().getPlayers()) {
                     Inventory inventory = player.getInventory();
                     boolean change = false;
-                    for (int i = 0; i < inventory.getContainerSize(); i++) {
-                        ItemStack stack = inventory.getItem(i);
-                        e = new Consumable(FigManager.FIGS.consumeSeconds, ItemUseAnimation.EAT, SoundEvents.GENERIC_EAT, true, List.of());
-                        if (!stack.isEmpty()) {
-                            stack.set(DataComponents.CONSUMABLE, e);
-                            stack.set(DataComponents.FOOD, food);
-                            inventory.setItem(i, stack);
-                            change = true;
-                        }
+
+                    e = new Consumable(f.consumeSeconds.value, ItemUseAnimation.EAT, SoundEvents.GENERIC_EAT, true, List.of());
+                    ItemStack main = player.getMainHandItem();
+                    ItemStack off = player.getOffhandItem();
+                    if (!main.isEmpty()) {
+                        main.set(DataComponents.CONSUMABLE, e);
+                        main.set(DataComponents.FOOD, food);
+                        change = true;
                     }
+                    if (!off.isEmpty()) {
+                        off.set(DataComponents.CONSUMABLE, e);
+                        off.set(DataComponents.FOOD, food);
+                        change = true;
+                    }
+
                     if (change) {
                         inventory.setChanged();
                     }
