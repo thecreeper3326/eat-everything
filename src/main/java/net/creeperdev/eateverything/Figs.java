@@ -3,13 +3,20 @@ package net.creeperdev.eateverything;
 
 import net.creeperdev.eateverything.figManager.*;
 
+import java.lang.reflect.Field;
+import java.util.HashMap;
+import java.util.Map;
+
 public class Figs {
     public static Figs instance = new Figs();
 
+    public String divider1 = "MOD SETTINGS";
     public floatFig consumeSeconds = new floatFig("Consume Seconds","Amount of time for eating non-food items",0.5F,0,60);
     public intFig nutrition  = new intFig("Nutrition", "Amount of hunger points non-food items will restore",0,0,20);
+    public String divider2 = "ANOTHER DIVIDER";
     public floatFig saturation = new floatFig("Saturation", "Amount of saturation items will provide. Quick reference: 0.0=none 0.5=same as nutrition 1.0=twice nutrition",0,0,20);
     public booleanFig alwaysEat = new booleanFig("Alwats Eat", "If non-food items can be eated at full hunger",true);
+
 
     public static Figs build(
             floatFig consumeSeconds,
@@ -24,5 +31,6 @@ public class Figs {
         figs.alwaysEat = alwaysEat;
         return figs;
     }
+
 
 }

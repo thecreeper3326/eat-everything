@@ -32,14 +32,6 @@ public class FigManagerClient {
         });
         ClientPlayNetworking.registerGlobalReceiver(FigPacket.ID, ((payload, context) -> {
             Figs.instance = FigManager.fromString(payload.figs());
-            List<Object> e = FigManager.validate(Figs.instance);
-            if ((int) e.get(1) != 0) {
-                context.player().sendSystemMessage(Component.literal(e.get(1) + " errors occurred:"));
-                List<String> errorList = (List<String>) e.get(2);
-                for (String s : errorList) {
-                    context.player().sendSystemMessage(Component.literal(s));
-                }
-            }
         }));
 
     }

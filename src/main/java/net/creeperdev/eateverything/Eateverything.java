@@ -25,10 +25,11 @@ public class Eateverything implements ModInitializer {
     public static Logger LOGGER = LoggerFactory.getLogger("EatEverything");
     public static int counter = 0;
     public static String figManagerName = "eat_everything";
+    public static String projectVersion = "1.4";
     @Override
     public void onInitialize()  {
         LOGGER.info("Initializing...");
-        FigManager.init(figManagerName);
+        FigManager.init(figManagerName, projectVersion);
 
         ServerTickEvents.END_SERVER_TICK.register(server -> {
             counter++;
