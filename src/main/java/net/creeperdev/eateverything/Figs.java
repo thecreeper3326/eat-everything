@@ -1,36 +1,20 @@
 package net.creeperdev.eateverything;
 
 
-import net.creeperdev.eateverything.figManager.*;
+import net.creeperdev.figManager.Fig.*;
+import net.minecraft.ChatFormatting;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.lang.reflect.Field;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Figs {
     public static Figs instance = new Figs();
-
-    public String divider1 = "MOD SETTINGS";
-    public floatFig consumeSeconds = new floatFig("Consume Seconds","Amount of time for eating non-food items",0.5F,0,60);
-    public intFig nutrition  = new intFig("Nutrition", "Amount of hunger points non-food items will restore",0,0,20);
-    public String divider2 = "ANOTHER DIVIDER";
-    public floatFig saturation = new floatFig("Saturation", "Amount of saturation items will provide. Quick reference: 0.0=none 0.5=same as nutrition 1.0=twice nutrition",0,0,20);
-    public booleanFig alwaysEat = new booleanFig("Alwats Eat", "If non-food items can be eated at full hunger",true);
-
-
-    public static Figs build(
-            floatFig consumeSeconds,
-            intFig nutrition,
-            floatFig saturation,
-            booleanFig alwaysEat
-    ) {
-        Figs figs = new Figs();
-        figs.consumeSeconds = consumeSeconds;
-        figs.nutrition = nutrition;
-        figs.saturation = saturation;
-        figs.alwaysEat = alwaysEat;
-        return figs;
-    }
-
+    public DividerFig divider = new DividerFig("General settings", ChatFormatting.WHITE,true,false,false);
+    public FloatFig consumeSeconds = new FloatFig("Consume Seconds","Amount of time for eating non-food items",0.5F,0,60);
+    public ListFig r = new ListFig("cool list", "e",50,3,"string","e","v","ed","vd");
+    public IntFig nutrition = new IntFig("Nutrition", "Amount of hunger poInts non-food items will restore",0,0,20);
+    public FloatFig saturation = new FloatFig("Saturation", "Amount of saturation items will provide. Quick reference: 0.0=none 0.5=same as nutrition 1.0=twice nutrition",0,0,20);
+    public BooleanFig alwaysEat = new BooleanFig("Alwats Eat", "If non-food items can be eated at full hunger",true);
+    public MapFig e = new MapFig("cool list again", "e",50,5,"string","e","v","ed","vd");
 
 }

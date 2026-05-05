@@ -1,10 +1,10 @@
-package net.creeperdev.eateverything.figManager;
+package net.creeperdev.sleepDeprivation.figManager;
 
-public class booleanFig {
+public class BooleanFig {
     public boolean value;
     public String name;
     public String description;
-    public booleanFig(String name, String description, Boolean value) {
+    public BooleanFig(String name, String description, Boolean value) {
         this.value = value;
         this.name = name;
         this.description = description;

@@ -4,10 +4,10 @@
   "version": "${version}",
   "name": "eateverything",
   "description": "eat EVERYTHING",
-  "authors": [],
+  "authors": ["TheCreeper3326"],
   "contact": {},
   "license": "All-Rights-Reserved",
-  "icon": "assets/eateverything/icon.png",
+  "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [
@@ -18,8 +18,13 @@
     ],
     "main": [
       "net.creeperdev.eateverything.Eateverything"
+    ],
+    "modmenu": [
+      "net.creeperdev.eateverything.client.ModMenu"
     ]
+
   },
+
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric-api": "*",

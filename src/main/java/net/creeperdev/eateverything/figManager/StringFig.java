@@ -1,11 +1,11 @@
-package net.creeperdev.eateverything.figManager;
+package net.creeperdev.sleepDeprivation.figManager;
 
-public class stringFig {
+public class StringFig {
     public String value;
     public String name;
     public String description;
     public int max;
-    public stringFig(String name, String description, String value, int max) {
+    public StringFig(String name, String description, String value, int max) {
         this.value = value;
         this.name = name;
         this.description = description;

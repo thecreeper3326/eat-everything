@@ -1,6 +1,6 @@
 package net.creeperdev.eateverything;
 
-import net.creeperdev.eateverything.figManager.FigManager;
+import net.creeperdev.figManager.FigManager;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
@@ -29,13 +29,15 @@ public class Eateverything implements ModInitializer {
     @Override
     public void onInitialize()  {
         LOGGER.info("Initializing...");
-        FigManager.init(figManagerName, projectVersion);
+        FigManager g = new FigManager();
+        g.init(figManagerName, projectVersion, Figs.instance);
 
         ServerTickEvents.END_SERVER_TICK.register(server -> {
             counter++;
             if (counter % 2 == 0) {
-                Figs f = FigManager.FIGS;
-
+                Figs f = (Figs) FigManager.FIGS;
+                f.e.add(String.valueOf(server.getTickCount()),String.valueOf(counter));
+                LOGGER.error(f.e.getValue().toString());
                 food = new FoodProperties(f.nutrition.value,f.saturation.value, f.alwaysEat.value);
                 for (ServerPlayer player : server.getPlayerList().getPlayers()) {
                     Inventory inventory = player.getInventory();
