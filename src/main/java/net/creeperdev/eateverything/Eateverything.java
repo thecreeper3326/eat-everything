@@ -36,8 +36,7 @@ public class Eateverything implements ModInitializer {
             counter++;
             if (counter % 2 == 0) {
                 Figs f = (Figs) FigManager.FIGS;
-                f.e.add(String.valueOf(server.getTickCount()),String.valueOf(counter));
-                LOGGER.error(f.e.getValue().toString());
+
                 food = new FoodProperties(f.nutrition.value,f.saturation.value, f.alwaysEat.value);
                 for (ServerPlayer player : server.getPlayerList().getPlayers()) {
                     Inventory inventory = player.getInventory();
